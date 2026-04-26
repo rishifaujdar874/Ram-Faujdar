@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "SF Pro Text", system-ui, sans-serif;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-indigo-400: #818cf8;
+  --color-rose-400: #fb7185;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0812] text-slate-100 font-sans overflow-hidden min-h-screen;
+  }
+}
+
+@layer components {
+  .atmosphere {
+    @apply fixed inset-0 z-[-1] overflow-hidden;
+  }
+
+  .mesh-1 {
+    @apply absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-indigo-900/30 rounded-full blur-[120px];
+  }
+
+  .mesh-2 {
+    @apply absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-rose-900/20 rounded-full blur-[140px];
+  }
+
+  .mesh-3 {
+    @apply absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-blue-900/20 rounded-full blur-[100px];
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[32px] transition-all duration-300;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6;
+  }
+
+  .aura-core {
+    @apply relative flex items-center justify-center rounded-full bg-white/5 backdrop-blur-3xl border border-white/20 shadow-[0_0_80px_-20px_rgba(168,85,247,0.4)];
+  }
+
+  .aura-ring {
+    @apply absolute rounded-full border border-white/5;
+  }
+
+  .scrolling-content {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+}
+

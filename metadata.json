@@ -1,0 +1,6 @@
+{
+  "name": "Aura: Your Human AI Companion",
+  "description": "An empathetic, human-like AI assistant designed to understand your feelings and talk to you naturally without robotic constraints.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
